@@ -27,6 +27,9 @@ def m15_biocenter_idk6767():
     drive_base.turn(-90)
     front_attachment_motor.run_angle(500, -60)
 
+def idk_6767():
+    pass
+
 
 # The main program starts here.
 print('Hello, Pybricks!')

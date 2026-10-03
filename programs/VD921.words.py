@@ -15,27 +15,8 @@ left_color_sensor = ColorSensor(Port.B)
 right_color_sensor = ColorSensor(Port.D)
 drive_base = DriveBase(left_motor, right_motor, 88, 144.75)
 
-def flip_the_rock():
-    drive_base.use_gyro(False)
-    drive_base.use_gyro(True)
-    drive_base.straight(275, then=Stop.BRAKE)
-    drive_base.turn(-25, then=Stop.BRAKE)
-    drive_base.straight(-20, then=Stop.BRAKE)
-    drive_base.straight(310, then=Stop.BRAKE)
-    drive_base.turn(10, then=Stop.BRAKE)
-    drive_base.straight(-305, then=Stop.BRAKE)
-    drive_base.turn(65, then=Stop.BRAKE)
-    drive_base.straight(110, then=Stop.BRAKE)
-    front_attachment_motor.run_angle(1500, -280)
-    drive_base.straight(175, then=Stop.BRAKE)
-    drive_base.settings(straight_speed=1500)
-    wait(200)
-    front_attachment_motor.run_angle(500, 320)
-    drive_base.straight(-300, then=Stop.BRAKE)
-
 
 # The main program starts here.
-# This code needs to be moved to new arch
 prime_hub.system.set_stop_button(None)
 while True:
     prime_hub.display.number(the_program)
@@ -50,9 +31,24 @@ while True:
         wait(200)
         prime_hub.system.set_stop_button(Button.CENTER)
         if the_program == 0:
-            pass
+            drive_base.use_gyro(False)
+            drive_base.use_gyro(True)
+            drive_base.straight(275, then=Stop.BRAKE)
+            drive_base.turn(-25, then=Stop.BRAKE)
+            drive_base.straight(-20, then=Stop.BRAKE)
+            drive_base.straight(310, then=Stop.BRAKE)
+            drive_base.turn(10, then=Stop.BRAKE)
+            drive_base.straight(-305, then=Stop.BRAKE)
+            drive_base.turn(65, then=Stop.BRAKE)
+            drive_base.straight(110, then=Stop.BRAKE)
+            front_attachment_motor.run_angle(1500, -280)
+            drive_base.straight(175, then=Stop.BRAKE)
+            drive_base.settings(straight_speed=1500)
+            wait(200)
+            front_attachment_motor.run_angle(500, 320)
+            drive_base.straight(-300, then=Stop.BRAKE)
         elif the_program == 1:
-            front_attachment_motor.run_angle(500, 360)
+            front_attachment_motor.run_angle(500, -360)
         elif the_program == 2:
             drive_base.straight(600)
             drive_base.turn(90)
