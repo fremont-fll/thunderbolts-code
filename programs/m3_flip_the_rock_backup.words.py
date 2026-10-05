@@ -29,13 +29,11 @@ def flip_the_rock():
     drive_base.straight(175, then=Stop.BRAKE)
     drive_base.settings(straight_speed=1000)
     wait(200)
-    front_attachment_motor.run_angle(500, 250, Stop.BRAKE)
-    drive_base.settings(straight_speed=1500)
-    drive_base.straight(-510, then=Stop.BRAKE)
-    drive_base.turn(-140, then=Stop.BRAKE)
-    drive_base.settings(straight_speed=1500)
-    wait(1000)
-    drive_base.straight(-1700, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(500, 320, Stop.BRAKE)
+    drive_base.straight(-500, then=Stop.BRAKE)
+    drive_base.turn(-150, then=Stop.BRAKE)
+    drive_base.settings(straight_speed=500)
+    drive_base.straight(-700, then=Stop.BRAKE)
 
 def kevin():
     front_attachment_motor.run_angle(500, -500)
