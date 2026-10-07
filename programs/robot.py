@@ -48,3 +48,12 @@ def stop_everything():
     drive_base.stop()
     front_attachment_motor.stop()
     back_attachment_motor.stop()
+
+
+def get_desired_heading():
+    return desired_heading
+
+
+def set_desired_heading(angle):
+    global desired_heading
+    desired_heading = angle
