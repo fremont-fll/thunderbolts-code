@@ -1,4 +1,5 @@
 from pybricks.parameters import Stop
+from pybricks.tools import wait
 
 from robot import (
     align_heading,
@@ -23,9 +24,14 @@ def m15_biocenter_idk6767():
     drive_base.straight(600)
     drive_base.straight(-50)
     drive_base.turn(90)
-    drive_base.straight(180)
+    drive_base.straight(170)
     drive_base.turn(-90)
-    drive_base.straight(130)
+    drive_base.straight(-50)
+    front_attachment_motor.run_angle(100, 100)
+    wait(100)
+    drive_base.straight(50)
+    front_attachment_motor.run_angle(100, -75)
+    front_attachment_motor.run_angle(75, 50)
 
 def m15_arm_debug():
     print('drop arm 6767')
