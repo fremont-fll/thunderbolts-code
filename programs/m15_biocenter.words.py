@@ -10,14 +10,6 @@ from robot import (
     turn_with_gybro,
 )
 
-def m6_leafcutter_frenzy():
-    prime_hub.imu.reset_heading(0)
-    drive_base.use_gyro(True)
-    drive_base.settings(straight_speed=200)
-    drive_base.straight(700, then=Stop.BRAKE)
-    turn_with_gybro(-90)
-    align_heading()
-
 def m15_biocenter_idk6767():
     drive_base.straight(600)
     drive_base.turn(90)
@@ -27,14 +19,13 @@ def m15_biocenter_idk6767():
     drive_base.straight(170)
     drive_base.turn(-90)
     drive_base.straight(-50)
-    front_attachment_motor.run_angle(100, 100)
+    front_attachment_motor.run_angle(200, 160)
     wait(100)
-    drive_base.straight(50)
-    front_attachment_motor.run_angle(100, -75)
-    front_attachment_motor.run_angle(75, 50)
+    drive_base.straight(55)
+    front_attachment_motor.run_angle(75, -110, Stop.BRAKE)
 
-def m15_arm_debug():
-    print('drop arm 6767')
+def lift():
+    front_attachment_motor.run_angle(500, -190)
 
 
 # The main program starts here.

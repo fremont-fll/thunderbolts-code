@@ -2,12 +2,12 @@ from robot import prime_hub, stop_everything
 from menu import run_menu
 from m7_fungus import m7_humongus_fungus_v2
 from m3_flip_the_rock import flip_the_rock, reset_front
-from m15_biocenter import m15_biocenter_idk6767, m15_arm_debug 
+from m15_biocenter import m15_biocenter_idk6767, lift 
 from m1_spoiled_drone import m1_drone
 
 
 run_menu(prime_hub, {
-    -2: m15_arm_debug,
+    -2: lift,
     -1: reset_front,
     0: flip_the_rock,
     1: m7_humongus_fungus_v2,
