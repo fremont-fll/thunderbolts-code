@@ -9,14 +9,14 @@ from robot import (
     turn_with_gybro,
 )
 
-def m7_humongus_fungus():
+def m7_humongus_fungus_v2():
     # This is me and Nemish's code for the right side.
     # We are doing algae thingy and ants,
-    drive_base.settings(straight_speed=200)
+    drive_base.settings(straight_speed=300)
     drive_base.use_gyro(True)
     drive_base.straight(500)
     drive_base.turn(-90)
-    drive_base.straight(97)
+    drive_base.straight(108)
     drive_base.turn(90)
     front_attachment_motor.run_angle(500, -300)
     drive_base.straight(113)
@@ -26,14 +26,13 @@ def m7_humongus_fungus():
     drive_base.straight(-75)
     drive_base.straight(40, then=Stop.BRAKE)
     front_attachment_motor.run_angle(500, 200, Stop.BRAKE)
-    drive_base.straight(92)
+    drive_base.straight(142)
     drive_base.turn(-90)
-    drive_base.straight(340, then=Stop.BRAKE)
+    drive_base.straight(374, then=Stop.BRAKE)
     drive_base.turn(135, then=Stop.BRAKE)
-    print('Yo Sup Chat!!! This is Mathew da bummity bum, and yall are great at legos.')
-    drive_base.settings(straight_speed=100)
-    drive_base.straight(395, then=Stop.BRAKE)
-    drive_base.straight(-9, then=Stop.BRAKE)
+    drive_base.settings(straight_speed=215)
+    drive_base.straight(434, then=Stop.BRAKE)
+    drive_base.straight(-12, then=Stop.BRAKE)
     drive_base.turn(42)
     drive_base.straight(475, then=Stop.BRAKE)
     front_attachment_motor.run_angle(500, -100, Stop.BRAKE)

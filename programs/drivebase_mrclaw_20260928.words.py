@@ -36,7 +36,7 @@ def Skunk_Works_Project__Align_Heading():
     print(desired_heading)
     print(heading_error)
 
-def _F0_9F_98_8EMr__Claw_the_37th_s_noble_mission_F0_9F_AB_A1():
+def MrClaws_mission():
     # This is me and Nemish's code for the right side.
     # We are doing algae thingy and ants,
     drive_base.use_gyro(True)
