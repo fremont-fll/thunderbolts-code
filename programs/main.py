@@ -4,6 +4,7 @@ from m7_fungus import m7_humongus_fungus_v2
 from m3_flip_the_rock import flip_the_rock, reset_front
 from m15_biocenter import m15_biocenter_idk6767, lift 
 from m1_spoiled_drone import m1_drone
+from m08_lift_them_trees import lift_the_treehaus
 
 
 run_menu(prime_hub, {
@@ -13,4 +14,5 @@ run_menu(prime_hub, {
     1: m7_humongus_fungus_v2,
     2: m15_biocenter_idk6767,
     3: m1_drone,
+    4: lift_the_treehaus
 }, on_abort=stop_everything)

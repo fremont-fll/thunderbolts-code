@@ -15,6 +15,3 @@ def m1_drone():
 
 
 # The main program starts here.
-turn_with_gybro(45)
-print(get_desired_heading())
-align_heading()

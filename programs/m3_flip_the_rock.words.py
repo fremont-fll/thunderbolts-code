@@ -18,7 +18,6 @@ def reset_front():
 def flip_the_rock():
     set_desired_heading(0)
     drive_base.settings(straight_speed=250)
-    # This is Jack and Varun's mission. Matthew is hoping to add an arm on the back attachment port that can lift up Mission 5, the tree branch thing.
     drive_base.use_gyro(False)
     drive_base.use_gyro(True)
     drive_base.straight(275, then=Stop.BRAKE)
