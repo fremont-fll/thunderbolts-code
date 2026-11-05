@@ -53,7 +53,6 @@ def lift_the_treehaus():
     align_heading()
     drive_base.settings(straight_speed=100)
     drive_base.straight(100, then=Stop.BRAKE)
-    # Next time we do this code, whoever is doing this needs to fine tune how much it lifts. It lifts too much.
     front_attachment_motor.run_angle(1000, 450)
     wait(67)
     front_attachment_motor.run_angle(1000, -300)
@@ -64,13 +63,10 @@ def lift_the_treehaus():
     drive_base.settings(straight_acceleration=[300, 750])
     drive_base.settings(straight_speed=750)
     drive_base.straight(-800, then=Stop.BRAKE)
+    print('Matthew is the GOAT of being GOATED!!!!!!')
 
 def reset_front():
     front_attachment_motor.run_angle(500, 360)
-
-def m1_spoiled_drone():
-    drive_base.settings(straight_speed=250)
-    drive_base.straight(-500)
 
 
 # The main program starts here.
