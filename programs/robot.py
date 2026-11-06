@@ -49,6 +49,28 @@ def align_heading():
     drive_base.use_gyro(True)
 
 
+# Async versions: use these from block files that contain a "multitask"
+# block (those files become async, and motor commands only wait if awaited).
+
+async def turn_with_gybro_async(angle):
+    global desired_heading
+    await drive_base.turn(angle, then=Stop.BRAKE)
+    desired_heading = desired_heading + angle
+
+
+async def align_heading_async():
+    heading_error = desired_heading - prime_hub.imu.heading()
+    drive_base.use_gyro(False)
+    drive_base.settings(turn_rate=50)
+    while abs(heading_error) > 1.0:
+        await drive_base.turn(0.9 * heading_error, then=Stop.BRAKE)
+        heading_error = desired_heading - prime_hub.imu.heading()
+        print('correction', prime_hub.imu.heading(), heading_error, desired_heading)
+        await wait(100)
+    drive_base.settings(turn_rate=150)
+    drive_base.use_gyro(True)
+
+
 def stop_everything():
     drive_base.stop()
     front_attachment_motor.stop()

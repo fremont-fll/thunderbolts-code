@@ -1,5 +1,5 @@
 from pybricks.parameters import Button
-from pybricks.tools import wait
+from pybricks.tools import run_task, wait
 
 
 def _wait_for_release(hub):
@@ -38,7 +38,11 @@ def run_menu(hub, programs, start=None, advance=True, on_abort=None):
             hub.system.set_stop_button(Button.CENTER)
             finished = False
             try:
-                programs[key]()
+                result = programs[key]()
+                # Block files that use "multitask" become async def, so calling
+                # them only returns a coroutine. Run it to actually do the mission.
+                if result is not None:
+                    run_task(result)
                 finished = True
             except SystemExit:
                 if on_abort:
