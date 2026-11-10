@@ -17,7 +17,6 @@ def reset_front():
 
 def flip_the_rock():
     set_desired_heading(0)
-    drive_base.settings(straight_speed=200)
     drive_base.use_gyro(False)
     drive_base.use_gyro(True)
     drive_base.settings(straight_speed=250)
