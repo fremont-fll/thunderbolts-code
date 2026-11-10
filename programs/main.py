@@ -1,28 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from robot import prime_hub, stop_everything
 from menu import run_menu
 from m7_fungus import m7_humongus_fungus_v2, m11
@@ -42,4 +17,4 @@ run_menu(prime_hub, {
     4: lift_the_treehaus,
     5: reset_treehaus_arms
 }, on_abort=stop_everything)
-print (Matthew_is_the_GOAT)
+print ("Matthew_is_the_GOAT")

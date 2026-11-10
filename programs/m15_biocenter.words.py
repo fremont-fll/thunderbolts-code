@@ -13,7 +13,7 @@ from robot import (
 def m15_biocenter_idk6767():
     drive_base.straight(600)
     drive_base.turn(90)
-    drive_base.straight(520)
+    drive_base.straight(560)
     drive_base.straight(-50)
     drive_base.turn(90)
     drive_base.straight(215)
@@ -22,10 +22,15 @@ def m15_biocenter_idk6767():
     drive_base.straight(30)
     front_attachment_motor.run_angle(75, -65, Stop.BRAKE)
     wait(100)
-    front_attachment_motor.run_angle(30, 95, Stop.BRAKE)
+    front_attachment_motor.run_angle(30, 125, Stop.BRAKE)
+    drive_base.straight(-20)
+    drive_base.turn(20)
+    wait(100)
+    drive_base.settings(straight_speed=500)
+    drive_base.straight(1500)
 
 def lift():
-    front_attachment_motor.run_angle(500, -170)
+    front_attachment_motor.run_angle(500, -190)
 
 
 # The main program starts here.
