@@ -33,14 +33,9 @@ def turn_with_gybro(angle):
 
 def align_heading():
     heading_error = desired_heading - prime_hub.imu.heading()
-    print('initial align')
-    print(desired_heading)
-    print(prime_hub.imu.heading())
-    print(heading_error)
-    print('now aligning')
     drive_base.use_gyro(False)
     drive_base.settings(turn_rate=50)
-    while abs(heading_error) > 1.0:
+    while abs(heading_error) > 1.5:
         drive_base.turn(0.9 * heading_error, then=Stop.BRAKE)
         heading_error = desired_heading - prime_hub.imu.heading()
         print('correction', prime_hub.imu.heading(), heading_error, desired_heading)
