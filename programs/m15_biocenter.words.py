@@ -11,6 +11,7 @@ from robot import (
 )
 
 def m15_biocenter_idk6767():
+    drive_base.settings(straight_speed=200)
     drive_base.straight(600)
     drive_base.turn(90)
     drive_base.straight(560)
