@@ -20,6 +20,9 @@ def reset_treehaus_arms():
     wait(1000)
     align_heading()
 
+def reset_front():
+    front_attachment_motor.run_angle(500, 360)
+
 def lift_the_treehaus():
     set_desired_heading(0)
     reset_heading()
@@ -47,7 +50,7 @@ def lift_the_treehaus():
     turn_with_gybro(90)
     align_heading()
     drive_base.settings(straight_speed=200)
-    drive_base.straight(255)
+    drive_base.straight(280)
     front_attachment_motor.run_angle(500, -190)
     turn_with_gybro(-90)
     align_heading()
@@ -66,8 +69,51 @@ def lift_the_treehaus():
     print('Matthew is the GOAT of being GOATED!!!!!!')
     drive_base.settings(straight_speed=200)
 
-def reset_front():
-    front_attachment_motor.run_angle(500, 360)
+def lift_the_treehaus_leaves():
+    set_desired_heading(0)
+    reset_heading()
+    drive_base.settings(straight_speed=400)
+    drive_base.use_gyro(False)
+    drive_base.use_gyro(True)
+    drive_base.straight(700)
+    align_heading()
+    front_attachment_motor.run_angle(5000, -1100)
+    drive_base.straight(65, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(400, 425, Stop.BRAKE)
+    drive_base.settings(straight_speed=100)
+    drive_base.straight(95, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(400, -50, Stop.BRAKE)
+    drive_base.straight(-115, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(500, -90)
+    drive_base.straight(20, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(400, 50)
+    drive_base.straight(35, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(400, 150)
+    drive_base.straight(80, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(500, -210)
+    drive_base.straight(-250)
+    # end of reaching roots
+    turn_with_gybro(90)
+    align_heading()
+    drive_base.settings(straight_speed=200)
+    drive_base.straight(280)
+    front_attachment_motor.run_angle(500, -190)
+    turn_with_gybro(-90)
+    align_heading()
+    drive_base.settings(straight_speed=100)
+    drive_base.straight(100, then=Stop.BRAKE)
+    front_attachment_motor.run_angle(1000, 450)
+    wait(67)
+    front_attachment_motor.run_angle(1000, -300)
+    drive_base.straight(-90)
+    # Everything after this is getting the robot back to home
+    front_attachment_motor.run_angle(1000, -100)
+    turn_with_gybro(-90)
+    align_heading()
+    drive_base.settings(straight_speed=300)
+    drive_base.straight(150)
+    turn_with_gybro(45)
+    drive_base.straight(120)
 
 
 # The main program starts here.
