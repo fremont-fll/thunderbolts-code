@@ -72,9 +72,9 @@ def my_task():
     drive_base.straight(-100)
 
 def m_11():
-    drive_base.straight(320, then=Stop.BRAKE)
-    front_attachment_motor.run_angle(2000, 360, Stop.BRAKE)
-    drive_base.straight(-360, then=Stop.BRAKE)
+    drive_base.straight(240)
+    front_attachment_motor.run_angle(2000, 180, Stop.BRAKE)
+    drive_base.straight(-300)
 
 
 # The main program starts here.
