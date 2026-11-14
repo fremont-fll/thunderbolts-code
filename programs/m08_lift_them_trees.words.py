@@ -59,7 +59,7 @@ def lift_the_treehaus():
     drive_base.straight(-90)
     # Everything after this is getting the robot back to home
     drive_base.turn(45)
-    front_attachment_motor.run_angle(500, 500)
+    front_attachment_motor.run_angle(500, -350)
     drive_base.settings(straight_acceleration=[300, 750])
     drive_base.settings(straight_speed=1500)
     drive_base.straight(-800, then=Stop.BRAKE)
