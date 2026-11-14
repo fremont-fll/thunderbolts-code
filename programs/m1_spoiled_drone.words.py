@@ -11,9 +11,8 @@ from robot import (
 
 def m1_drone():
     set_desired_heading(0)
-    drive_base.settings(straight_speed=350)
     drive_base.straight(800)
-    drive_base.settings(straight_speed=1500)
+    drive_base.settings(straight_speed=600)
     drive_base.straight(-800)
 
 
