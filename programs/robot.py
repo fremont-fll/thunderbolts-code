@@ -39,7 +39,7 @@ def align_heading():
         drive_base.turn(0.9 * heading_error, then=Stop.BRAKE)
         heading_error = desired_heading - prime_hub.imu.heading()
         print('correction', prime_hub.imu.heading(), heading_error, desired_heading)
-        wait(100)
+        wait(50)
     drive_base.settings(turn_rate=150)
     drive_base.use_gyro(True)
 
