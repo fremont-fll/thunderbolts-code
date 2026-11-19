@@ -14,7 +14,7 @@ def m15_biocenter_idk6767():
     drive_base.settings(straight_speed=400)
     drive_base.straight(600)
     drive_base.turn(90)
-    drive_base.straight(540)
+    drive_base.straight(530)
     drive_base.settings(straight_speed=200)
     drive_base.straight(-50)
     drive_base.turn(90)

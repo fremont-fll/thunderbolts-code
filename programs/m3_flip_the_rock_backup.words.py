@@ -18,7 +18,7 @@ def flip_the_rock():
     drive_base.use_gyro(True)
     drive_base.settings(straight_speed=200)
     drive_base.straight(275, then=Stop.BRAKE)
-    drive_base.turn(-27, then=Stop.BRAKE)
+    drive_base.turn(-29, then=Stop.BRAKE)
     drive_base.straight(-20, then=Stop.BRAKE)
     drive_base.straight(310, then=Stop.BRAKE)
     drive_base.turn(10, then=Stop.BRAKE)
